@@ -54,7 +54,7 @@ header .button{
 header .button .btn{
     width: 120px;
     padding: 8px;
-    background-color:transparent;
+    background-color:yellowgreen;
     border: 2px solid white;
     outline: none;
     box-shadow: 0 0 10px white;
