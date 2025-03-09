@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hire Me</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #121212;
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    .container {
+      max-width: 800px;
+      margin: 50px auto;
+      padding: 20px;
+      background-color: #1e1e1e;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+      border-radius: 10px;
+      perspective: 1000px;
+      color: #ffffff;
+    }
+    .container h2,
+    .container h3 {
+      text-align: center;
+      color: #ff6f61;
+      margin-bottom: 20px;
+      animation: rotateIn 1s ease-in-out, colorChange 4s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    .container p,
+    .container ul li,
+    .qa-section div {
+      animation: rotateIn 1s ease-in-out, slideIn 1.5s ease-in-out, colorChange 4s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    .hire-me {
+      margin-bottom: 30px;
+    }
+    .personal-touch,
+    .qa-section {
+      margin-top: 20px;
+    }
+    .personal-touch ul,
+    .qa-section .question {
+      list-style-type: none;
+      padding: 0;
+    }
+    .personal-touch ul li,
+    .qa-section div {
+      margin-bottom: 10px;
+      padding: 15px;
+      background-color: #252bcf;
+      border-radius: 5px;
+      color: #1e1e1e;
+    }
+    .qa-section .question {
+      font-weight: bold;
+    }
+
+    @keyframes rotateIn {
+      from {
+        opacity: 0;
+        transform: rotateY(-90deg);
+      }
+      to {
+        opacity: 1;
+        transform: rotateY(0deg);
+      }
+    }
+    @keyframes slideIn {
+      from {
+        opacity: 0;
+        transform: translateX(-100%);
+      }
+      to {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+    @keyframes colorChange {
+      0%, 100% {
+        color: #ff6f61;
+      }
+      25% {
+        color: #ffd700;
+      }
+      50% {
+        color: #7fffd4;
+      }
+      75% {
+        color: #ff69b4;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="hire-me">
+      <h2>Hire Me</h2>
+      <p>If my profile interests you, please send me a message in the "Contact" section. I look forward to connecting with you!</p>
+    </div>
+    <div class="personal-touch">
+      <h3>About Me</h3>
+      <ul>
+        <li><strong>Hobbies:</strong> Coding, reading, and poem writing. These activities fuel my creativity and keep me engaged.</li>
+        <li><strong>Interests:</strong> I'm passionate about full-stack development and constantly strive to improve my skills in this area.</li>
+        <li><strong>Achievements:</strong> I have completed many online courses from top companies like Tata, Infosys, and IBM. You can find my certificates in the "About" section.</li>
+      </ul>
+    </div>
+    <div class="qa-section">
+      <h3>Frequently Asked Questions</h3>
+      <div>
+        <div class="question">Q: What inspired you to pursue a career in full-stack development?</div>
+        <div class="answer">A: My passion for technology and problem-solving drives my interest in full-stack development. I love the challenge of creating dynamic, user-friendly web applications and constantly learning new skills and technologies.</div>
+      </div>
+      <div>
+        <div class="question">Q: How do you keep up with the latest trends and technologies in web development?</div>
+        <div class="answer">A: I stay updated by following industry blogs, participating in online courses, attending conferences, and being active in developer communities. Continuous learning is crucial in this fast-paced field, and I enjoy exploring new tools and frameworks.</div>
+      </div>
+      <div>
+        <div class="question">Q: What do you enjoy most about being a full-stack developer?</div>
+        <div class="answer">A: What I enjoy most about being a full-stack developer is the ability to work on both the front-end and back-end aspects of a project. This allows me to have a comprehensive understanding of the entire development process and create seamless, integrated solutions that provide a great user experience.</div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

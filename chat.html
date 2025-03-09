@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Professional Chatbox</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+    }
+    .chatbox {
+      width: 400px;
+      height: 500px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      margin: 50px auto;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .chatbox h2 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #007bff;
+    }
+    .messages {
+      height: 350px;
+      overflow-y: scroll;
+      border-bottom: 1px solid #ccc;
+      padding: 10px;
+    }
+    .message {
+      margin-bottom: 10px;
+      padding: 5px;
+      border-radius: 5px;
+    }
+    .message.sent {
+      background-color: #007bff;
+      color: white;
+      text-align: right;
+    }
+    .message.received {
+      background-color: #f1f1f1;
+      color: black;
+    }
+    .input-group {
+      display: flex;
+    }
+    .input-group input {
+      flex: 1;
+      padding: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px 0 0 5px;
+    }
+    .input-group button {
+      padding: 10px;
+      border: none;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+      border-radius: 0 5px 5px 0;
+    }
+  </style>
+</head>
+<body>
+  <div class="chatbox">
+    <h2>Chat with Nisha</h2>
+    <div class="messages" id="messages"></div>
+    <div class="input-group">
+      <input type="text" id="inputMessage" placeholder="Type your message...">
+      <button onclick="sendMessage()">Send</button>
+    </div>
+  </div>
+
+  <script>
+    function sendMessage() {
+      const messagesDiv = document.getElementById('messages');
+      const inputMessage = document.getElementById('inputMessage').value;
+      if (inputMessage.trim() !== '') {
+        const newMessageDiv = document.createElement('div');
+        newMessageDiv.className = 'message sent';
+        newMessageDiv.textContent = inputMessage;
+        messagesDiv.appendChild(newMessageDiv);
+
+        // Send message to the server using Web3Forms
+        fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          },
+          body: JSON.stringify({
+            access_key: '4bc732d8-ce63-4214-9c52-6a0d05a8b81f',
+            subject: 'New Chat Message from Portfolio',
+            message: inputMessage,
+            replyTo: 'your-email@example.com' // Replace with your email address
+          })
+        })
+        .then(response => response.json())
+        .then(data => {
+          if (data.success) {
+            const replyMessageDiv = document.createElement('div');
+            replyMessageDiv.className = 'message received';
+            replyMessageDiv.textContent = 'Thank you for your message! give me your mobile number or email id Nisha will get back to you soon.Have a great day!';
+            
+            messagesDiv.appendChild(replyMessageDiv);
+            messagesDiv.scrollTop = messagesDiv.scrollHeight;
+          }
+        });
+
+        document.getElementById('inputMessage').value = '';
+      }
+    }
+  </script>
+</body>
+</html>

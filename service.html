@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Portfolio - Services</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f5f5f5;
+            perspective: 1000px; /* Add perspective to the body */
+        }
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+        }
+        #services {
+            margin: 30px 0;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+            transform-style: preserve-3d; /* Enable 3D transformations */
+        }
+        #services h2 {
+            text-align: center;
+            color: #333333;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333333;
+            transform: translateZ(50px); /* Add depth to the heading */
+        }
+        .service-item {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            transform: translateZ(30px); /* Add depth to the service items */
+        }
+        .service-item .service {
+            flex: 1;
+            margin: 10px;
+            padding: 20px;
+            background: #121212;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(51, 7, 195, 0.1);
+            transform: rotateY(15deg); /* Rotate service items for 3D effect */
+            transition: transform 0.3s ease;
+        }
+        .service-item .service:hover {
+            transform: rotateY(0deg); /* Reset rotation on hover */
+        }
+        .contact-form {
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+        }
+        .contact-form h2 {
+            text-align: center;
+            color: #333333;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #333333;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: none;
+            border-bottom: 2px solid #333333;
+            outline: none;
+            background: none;
+            resize: none;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #ede9e9;
+            animation: discoBackground 3s infinite alternate;
+        }
+        @keyframes discoBackground {
+            0% { background-color: #1d1b1b; }
+            25% { background-color: #461acd; }
+            50% { background-color: #0e0e10; }
+            75% { background-color: #d81178; }
+            100% { background-color: #b1151b; }
+            50% { background-color: #181817; }
+            100% { background-color: #e80fb9; }
+            75% { background-color: #5e8299; }
+        }
+        .contact-form button {
+            width: 100%;
+            background-color: #333333;
+            border: none;
+            padding: 10px;
+            color: #ffffff;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .contact-form button:hover {
+            background-color: #555555;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section id="services">
+            <h2>My Services</h2>
+            <div class="service-item">
+                <div class="service">
+                    <h3>Full-Stack Development</h3>
+                    <p>Creating responsive and dynamic websites with HTML, CSS, JavaScript, and backend technologies.</p>
+                </div>
+                <div class="service">
+                    <h3>Java Programming</h3>
+                    <p>Developing robust and scalable applications using Java and related frameworks.</p>
+                </div>
+                <div class="service">
+                    <h3>Startup Programming</h3>
+                    <p>Building and supporting startup projects with end-to-end development solutions, including MVPs and scalable platforms.</p>
+                </div>
+                <img src ="jk.png" width="100%" height="20%">
+            </div>
+        </section>
+        
+       
+    </div>
+</body>
+</html>
