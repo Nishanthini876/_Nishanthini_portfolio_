@@ -31,30 +31,18 @@
       animation: rotateIn 1s ease-in-out, colorChange 4s ease-in-out infinite;
       transform-style: preserve-3d;
     }
-    .container p,
-    .container ul li,
-    .qa-section div {
-      animation: rotateIn 1s ease-in-out, slideIn 1.5s ease-in-out, colorChange 4s ease-in-out infinite;
-      transform-style: preserve-3d;
-    }
-    .hire-me {
-      margin-bottom: 30px;
-    }
     .download-resume {
       text-align: center;
       margin: 20px 0;
-    }
-    .download-resume button {
-      padding: 10px 20px;
-      color: #ffffff;
-      background-color: #ff6f61;
-      border: none;
-      border-radius: 5px;
       cursor: pointer;
+      padding: 10px;
+      background-color: #ff6f61;
+      color: #ffffff;
+      border-radius: 5px;
       box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-      font-size: 16px;
+      display: inline-block;
     }
-    .download-resume button:hover {
+    .download-resume:hover {
       background-color: #ffd700;
     }
     .personal-touch,
@@ -119,8 +107,8 @@
       <h2>Hire Me</h2>
       <p>If my profile interests you, please send me a message in the "Contact" section. I look forward to connecting with you!</p>
     </div>
-    <div class="download-resume">
-      <button onclick="window.location.href="NISHANTHINIV_InternshalaResume (5).pdf">Download My Resume</button>
+    <div class="download-resume" onclick="downloadResume()">
+      Download My Resume
     </div>
     <div class="personal-touch">
       <h3>About Me</h3>
@@ -146,5 +134,11 @@
       </div>
     </div>
   </div>
+
+  <script>
+    function downloadResume() {
+      window.location.href = '';
+    }
+  </script>
 </body>
 </html>
