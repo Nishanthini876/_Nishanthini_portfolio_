@@ -31,11 +31,20 @@
       animation: rotateIn 1s ease-in-out, colorChange 4s ease-in-out infinite;
       transform-style: preserve-3d;
     }
+    .container p,
+    .container ul li,
+    .qa-section div {
+      animation: rotateIn 1s ease-in-out, slideIn 1.5s ease-in-out, colorChange 4s ease-in-out infinite;
+      transform-style: preserve-3d;
+    }
+    .hire-me {
+      margin-bottom: 30px;
+    }
     .download-resume {
       text-align: center;
       margin: 20px 0;
       cursor: pointer;
-      padding: 10px;
+      padding: 10px 20px;
       background-color: #ff6f61;
       color: #ffffff;
       border-radius: 5px;
@@ -107,7 +116,7 @@
       <h2>Hire Me</h2>
       <p>If my profile interests you, please send me a message in the "Contact" section. I look forward to connecting with you!</p>
     </div>
-    <div class="download-resume" onclick="downloadResume()">
+    <div class="download-resume" id="downloadResume">
       Download My Resume
     </div>
     <div class="personal-touch">
@@ -136,9 +145,12 @@
   </div>
 
   <script>
-    function downloadResume() {
-      window.location.href = 'NISHANTHINIV_InternshalaResume (5).pdf';
-    }
+    document.getElementById('downloadResume').addEventListener('click', function() {
+      const link = document.createElement('a');
+      link.href = 'resume.pdf'; // Path to the resume file
+      link.download = 'Nisha_Resume.pdf'; // Name of the downloaded file
+      link.click();
+    });
   </script>
 </body>
 </html>
