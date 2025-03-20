@@ -4,17 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About Nishanthini</title>
-    <style>
-       body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f4f4f4;
-  color: #ede9e9;
-  animation: discoBackground 3s infinite alternate;
+    
+   <style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #ede9e9;
+    animation: discoBackground 3s infinite alternate;
 }
-
-
 
 .skill {
     display: flex;
@@ -39,7 +38,7 @@
 }
 
 .skill-bar {
-    width: 5%;
+    width: 100%; /* Adjusted to occupy full width for better scaling */
     height: 12px;
     background-color: #ddd;
     border-radius: 5px;
@@ -49,82 +48,84 @@
 
 .skill-level {
     height: 100%;
-    background: linear-gradient(90deg, #5cb85c, #3b6e3b;
+    background: linear-gradient(90deg, #5cb85c, #3b6e3b); /* Fixed missing parenthesis */
     border-radius: 5px;
 }
+
 @keyframes discoBackground {
-  0% { background-color: #1d1b1b; }
-  25% { background-color: #461acd; }
-  50% { background-color: #0e0e10; }
-  75% { background-color: #d81178; }
-  100% { background-color: #b1151b; }
-  50% { background-color: #181817; }
-  100% { background-color: #e80fb9; }
-  75% { background-color: #5e8299; }
+    0% { background-color: #1d1b1b; }
+    25% { background-color: #461acd; }
+    50% { background-color: #0e0e10; }
+    75% { background-color: #d81178; }
+    100% { background-color: #b1151b; }
+    50% { background-color: #181817; }
+    100% { background-color: #e80fb9; }
+    75% { background-color: #5e8299; }
 }
 
 #about {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 100px;
-  background: rgba(35, 35, 35, 0.8);
-  box-shadow: 0 2px 4px rgba(107, 101, 101, 0.1),
-              0 2px 4px rgba(69, 18, 210, 0.1),
-              0 2px 4px rgba(154, 61, 135, 0.1);
-  border-radius: 8px;
-  transition: background 0.5s ease;
+    max-width: 1000px;
+    margin: 50px auto;
+    padding: 50px; /* Adjusted padding for a balanced layout */
+    background: rgba(35, 35, 35, 0.8);
+    box-shadow: 0 2px 4px rgba(107, 101, 101, 0.1),
+                0 2px 4px rgba(69, 18, 210, 0.1),
+                0 2px 4px rgba(154, 61, 135, 0.1);
+    border-radius: 8px;
+    transition: background 0.5s ease;
 }
 
 h2, h3 {
-  color: #f3f0f0;
-  text-align: top center;
+    color: #f3f0f0;
+    text-align: center; /* Corrected alignment */
 }
 
 p {
-  line-height: 1.6;
+    line-height: 1.6;
 }
 
 .certificate-grid {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  gap: 10px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 .certificate-grid img {
-  max-width: 100%;
-  height: auto;
-  max-height: 200px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  padding: 5px;
-  transition: transform 0.2s ease-in-out;
-  cursor: pointer;
+    max-width: 100%;
+    height: auto;
+    max-height: 200px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    transition: transform 0.2s ease-in-out;
+    cursor: pointer;
 }
 
 .certificate-grid img.zoom:hover {
-  transform: scale(2.5);
+    transform: scale(2.5);
 }
 
 .certificate-grid div {
-  flex: 1 1 calc(33.333% - 10px);
-  text-align: center;
-}
-.text {
-    
-  max-width: 1000px;
-  background-color: rgba(35, 35, 35, 0.8);
-  padding: 10px;
-  border-radius: 8px;
-  color: #ede9e9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    flex: 1 1 calc(33.333% - 10px);
+    text-align: center;
 }
 
+.text {
+    max-width: 1000px;
+    background-color: rgba(35, 35, 35, 0.8);
+    padding: 10px;
+    border-radius: 8px;
+    color: #ede9e9;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
 
 p {
-  line-height: 1.4;
+    line-height: 1.4;
 }
-    </style>
+</style>
+ 
+  
 </head>
 <body>
     <section id="about">
