@@ -166,16 +166,16 @@ header .button .btn:hover {
     justify-content: center; /* Centers the image horizontally */
     align-items: center; /* Centers the image vertically */
     margin: 0 auto; /* Centers the image block */
-    width: 50px; /* Medium fixed width */
-    height: 50px; /* Medium fixed height */
+    width: 150px; /* Medium fixed width */
+    height: 150px; /* Medium fixed height */
     border-radius: 50%; /* Makes the image round */
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Glow effect */
     background-color: transparent;
 }
 
 .left .image img {
-    width: 50px; /* Ensures the image fits the container */
-    height: 50px; /* Matches the fixed size of the parent */
+    width: 150px; /* Ensures the image fits the container */
+    height: 150px; /* Matches the fixed size of the parent */
     border-radius: 50%; /* Makes the image round */
     border: 3px solid white; /* Adds white border around the image */
 }
