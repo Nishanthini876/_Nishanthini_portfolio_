@@ -158,7 +158,7 @@ header .button .btn:hover {
 
 /* Hero Left Section */
 .hero .left {
-    margin-right: 50px;
+    margin: 0 auto; /* Centers the image block */
 }
 
 .hero .left .image {
@@ -166,8 +166,8 @@ header .button .btn:hover {
     justify-content: center; /* Centers the image horizontally */
     align-items: center; /* Centers the image vertically */
     margin: 0 auto; /* Centers the image block */
-    width: 150px; /* Reduced fixed width */
-    height: 150px; /* Reduced fixed height */
+    width: 150px; /* Medium fixed width */
+    height: 150px; /* Medium fixed height */
     border-radius: 50%; /* Makes the image round */
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Glow effect */
     background-color: transparent;
@@ -179,7 +179,6 @@ header .button .btn:hover {
     border-radius: 50%; /* Makes the image round */
     border: 3px solid white; /* Adds white border around the image */
 }
-
 
 /* Disco Background Animation */
 @keyframes discoBackground {
@@ -212,8 +211,8 @@ header .button .btn:hover {
     }
 
     .left .image {
-        width: 200px;
-        height: 200px; /* Adjust smaller dimensions for tablets */
+        width: 120px;
+        height: 120px; /* Adjust smaller dimensions for tablets */
     }
 
     .social-media li {
@@ -238,12 +237,10 @@ header .button .btn:hover {
         font-size: 14px;
     }
 
-  .left .image img {
-    width: 100%; /* Ensures the image fits the container */
-    height: 100%; /* Matches the fixed size of the parent */
-    border-radius: 50%; /* Makes the image round */
-    border: 3px solid white; /* Adds white border around the image */
-}
+    .left .image {
+        width: 100px;
+        height: 100px; /* Adjust smaller dimensions for mobile devices */
+    }
 
     .buttton .h-btn {
         width: 100%;
