@@ -109,6 +109,7 @@ header .button .btn:hover {
     margin: 0 auto; /* Ensures the button container stays centered */
 }
 
+
 .right .buttton .h-btn {
     width: 130px;
     padding: 10px;
@@ -124,7 +125,6 @@ header .button .btn:hover {
     transition: 0.4s;
     align-items: center;
     justify-content: center;
-    top-margin:10px;
 }
 
 .h-btn:hover {
@@ -134,6 +134,7 @@ header .button .btn:hover {
     border-radius: 15px;
     filter: drop-shadow(0 0 10px blue);
 }
+
 
 
 /* Social Media Section */
