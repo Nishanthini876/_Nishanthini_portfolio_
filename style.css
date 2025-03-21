@@ -167,8 +167,8 @@ header .button .btn:hover {
     justify-content: center; /* Centers the image horizontally */
     align-items: center; /* Centers the image vertically */
     margin: 0 auto; /* Centers the image block */
-    width: 300px; /* Fixed width */
-    height: 300px; /* Fixed height */
+    width: 50px; /* Fixed width */
+    height: 50px; /* Fixed height */
     border-radius: 50%; /* Makes the image round */
     box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Glow effect */
     background-color: transparent;
