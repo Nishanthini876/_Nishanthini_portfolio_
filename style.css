@@ -115,6 +115,8 @@ header .button .btn:hover {
     cursor: pointer;
     font-size: 17px;
     transition: 0.4s;
+ align-items: center;
+    justify-content: center;
     
 }
 
