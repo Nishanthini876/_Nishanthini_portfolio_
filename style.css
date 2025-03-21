@@ -174,8 +174,8 @@ header .button .btn:hover {
 }
 
 .left .image img {
-    width: 150px; /* Ensures the image fits the container */
-    height: 150px; /* Matches the fixed size of the parent */
+    width: 250px; /* Ensures the image fits the container */
+    height: 200px; /* Matches the fixed size of the parent */
     border-radius: 50%; /* Makes the image round */
     border: 3px solid white; /* Adds white border around the image */
 }
