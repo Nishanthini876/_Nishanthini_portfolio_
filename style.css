@@ -96,45 +96,28 @@ header .button .btn:hover {
     width: 80%;
 }
 
-.right .buttton {
-    margin-top: 20px;
-    display: flex;
-    gap: 20px;
+.navbar ul {
+    display: flex; /* Keep items in one row */
+    gap: 20px; /* Space between links */
+    list-style: none; /* Removes bullet points */
+    margin: 0;
+    padding: 0;
 }
 
-.right .buttton {
-    display: flex; /* Enables flexbox for alignment */
-    justify-content: center; /* Centers the button horizontally */
-    align-items: center; /* Centers content vertically */
-    margin: 0 auto; /* Ensures the button container stays centered */
+.navbar ul li {
+    display: inline-block; /* Align items horizontally */
 }
 
-
-.right .buttton .h-btn {
-    width: 130px;
-    padding: 10px;
-    background-color: yellowgreen;
-    color: white;
-    border: 2px solid white;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5), /* White glow */
-                0 0 15px rgba(173, 216, 230, 0.5); /* Soft bluish glow */
-    border-radius: 10px;
-    outline: none;
-    cursor: pointer;
-    font-size: 17px;
-    transition: 0.4s;
-    align-items: center;
-    justify-content: center;
+.navbar ul li a {
+    color: #fff;
+    font-size: 16px;
+    text-decoration: none; /* Removes underline */
+    transition: color 0.3s; /* Smooth hover effect */
 }
 
-.h-btn:hover {
-    scale: 1.1;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.8), /* Brighter white glow on hover */
-                0 0 20px rgba(173, 216, 230, 0.8); /* Brighter bluish glow on hover */
-    border-radius: 15px;
-    filter: drop-shadow(0 0 10px blue);
-}
-
+.navbar ul li a:hover {
+    color: yellowgreen; /* Highlight on hover */
+}/
 
 
 /* Social Media Section */
@@ -215,18 +198,16 @@ header .button .btn:hover {
         text-align: center;
     }
 
-   
-    header .navbar ul {
-        display: flex;
-        flex-direction: row; /* Ensures items stay in one line */
-        justify-content: space-between; /* Spreads the items evenly */
-        gap: 10px; /* Reduces spacing on smaller screens */
-    }
 
-    header .navbar ul li a {
-        font-size: 12px; /* Slightly smaller font for mobile */
+    .navbar ul {
+        flex-wrap: wrap; /* Wrap items to the next line if needed */
+        justify-content: center; /* Center links */
+        gap: 15px; /* Adjust spacing for smaller screens */
     }
 }
+
+
+   
 
     .hero {
         flex-direction: column;
@@ -249,9 +230,14 @@ header .button .btn:hover {
 
 @media (max-width: 480px) {
     .navbar ul {
-        font-size: 0.9rem;
+        flex-direction: column; /* Stack links vertically */
+        gap: 10px; /* Reduce spacing further */
     }
 
+    .navbar ul li a {
+        font-size: 14px; /* Slightly smaller font for mobile */
+    }
+}
     .right h1 {
         font-size: 1.8rem;
     }
