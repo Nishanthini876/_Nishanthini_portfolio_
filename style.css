@@ -178,6 +178,7 @@ header .button .btn:hover {
     height: auto; /* Matches the fixed size of the parent */
     border-radius: 50%; /* Makes the image round */
     border: 3px solid white; /* Adds white border around the image */
+    box-shadow: 0 5px 14px white;
 }
 
 /* Disco Background Animation */
