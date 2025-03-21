@@ -111,7 +111,7 @@ header .button .btn:hover {
 
 .right .buttton .h-btn {
     width: 130px;
-    padding: 20px;
+    padding: 30px;
     background-color: yellowgreen;
     color: white;
     border: 2px solid white;
@@ -213,9 +213,18 @@ header .button .btn:hover {
         text-align: center;
     }
 
-    .navbar ul {
-        flex-direction: column;
+   
+    header .navbar ul {
+        display: flex;
+        flex-direction: row; /* Ensures items stay in one line */
+        justify-content: space-between; /* Spreads the items evenly */
+        gap: 10px; /* Reduces spacing on smaller screens */
     }
+
+    header .navbar ul li a {
+        font-size: 12px; /* Slightly smaller font for mobile */
+    }
+}
 
     .hero {
         flex-direction: column;
