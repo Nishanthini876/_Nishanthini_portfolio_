@@ -173,16 +173,19 @@ header .button .btn:hover {
 }
 
 /* Disco Background Animation */
-@keyframes discoBackground {
-    0% { background-color: #1d1b1b; }
-    25% { background-color: #461acd; }
-    50% { background-color: #0e0e10; }
-    75% { background-color: #d81178; }
-    100% { background-color: #b1151b; }
-    50% { background-color: #181817; }
-    100% { background-color: #e80fb9; }
-    75% { background-color: #5e8299; }
+@keyframes darkDiscoBackground {
+    0% { background-color: #000000; } /* Pure Black */
+    25% { background-color: #0a0a23; } /* Very Dark Blue */
+    50% { background-color: #000033; } /* Midnight Blue */
+    75% { background-color: #14142b; } /* Muted Navy */
+    100% { background-color: #000000; } /* Back to Black */
 }
+
+body {
+    animation: darkDiscoBackground 4s infinite alternate;
+    color: white; /* Ensure text is visible */
+}
+
 
 /* Media Queries for Responsiveness */
 @media (max-width: 768px) {
