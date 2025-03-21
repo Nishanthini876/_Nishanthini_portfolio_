@@ -163,20 +163,24 @@ header .button .btn:hover {
 }
 
 .hero .left .image {
-     display: block;
-    margin: 0 auto; /* Centers the image */
-    max-width: 100%; /* Ensures the image doesn't exceed the container width */
-    height: auto; /* Maintains aspect ratio */
+    display: flex; /* Ensures proper alignment */
+    justify-content: center; /* Centers the image horizontally */
+    align-items: center; /* Centers the image vertically */
+    margin: 0 auto; /* Centers the image block */
+    width: 300px; /* Fixed width */
+    height: 300px; /* Fixed height */
     border-radius: 50%; /* Makes the image round */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3);
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Glow effect */
+    background-color: transparent;
 }
 
 .left .image img {
-    width: 100%;
-    height: 100%;
-    border-radius: 50%;
-    border: 2px solid white;
+    width: 100%; /* Ensures the image fits the container */
+    height: 100%; /* Ensures the aspect ratio matches the fixed size */
+    border-radius: 50%; /* Makes the image round */
+    border: 2px solid white; /* Adds white border around the image */
 }
+
 
 /* Disco Background Animation */
 @keyframes discoBackground {
