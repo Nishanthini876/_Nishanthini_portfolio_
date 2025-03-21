@@ -50,6 +50,54 @@ body {
     background: linear-gradient(90deg, #5cb85c, #3b6e3b); /* Fixed missing parenthesis */
     border-radius: 5px;
 }
+      /* General reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Universal container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 15px;
+}
+
+/* Responsive text */
+h1, p {
+  font-size: 2rem; /* Desktop size */
+}
+
+/* Media query for mobile devices */
+@media (max-width: 768px) {
+  h1, p {
+    font-size: 1.5rem; /* Mobile size */
+  }
+
+  .container {
+    padding: 10px;
+  }
+}
+
+/* Flexbox example for content alignment */
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  flex: 1 1 calc(33.333% - 10px); /* Adjust to fit */
+  margin: 5px;
+}
+
+@media (max-width: 768px) {
+  .flex-item {
+    flex: 1 1 100%; /* Stack items on mobile */
+  }
+}
+
 
 @keyframes discoBackground {
     0% { background-color: #1d1b1b; }
