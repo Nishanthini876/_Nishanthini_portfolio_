@@ -1,0 +1,176 @@
+<html lang="en">
+<style>
+    .projects-section {
+    padding: 50px;
+    background-color: #1d1b1b;
+    color: #fff;
+    text-align: center;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: yellowgreen;
+}
+
+.projects-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.project-card {
+    width: 300px;
+    background-color: #333;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.5);
+}
+
+.project-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 15px;
+}
+
+.project-title {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.project-description {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    color: #ccc;
+}
+
+.project-link {
+    text-decoration: none;
+    color: yellowgreen;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: #fff;
+}
+
+/* Disco Background Animation for Demo Button */
+.demo-button {
+    display: block;
+    width: 100px;
+    margin: 10px auto;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    animation: discoBackground 3s infinite alternate;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.demo-button:hover {
+    transform: scale(1.1);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+@keyframes discoBackground {
+    0% { background-color: #ff5733; }
+    25% { background-color: #33c4ff; }
+    50% { background-color: #8e44ad; }
+    75% { background-color: #27ae60; }
+    100% { background-color: #f1c40f; }
+}
+@media screen and (max-width: 768px) {
+    .projects-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .project-card {
+        width: 90%; /* Adjust card width for smaller screens */
+    }
+
+    .demo-button {
+        width: 80px; /* Reduce button size */
+        font-size: 0.8rem; /* Adjust font size */
+    }
+}
+
+</style>
+<section class="projects-section" id="projects">
+    <h2 class="section-title">My Projects</h2>
+    <div class="projects-container">
+        <!-- Project 1 -->
+        <div class="project-card">
+            <img src="whether.png" alt="Project 1" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Project 1</h3>
+                <p class="project-description">"The weather website" is a user-friendly platform that provides real-time weather updates, forecasts, and severe weather alerts. It ensures accessibility and convenience with a sleek design tailored for quick navigation.</p>
+                <button class="demo-button"><a href="https://nishanthini876.github.io/PRODIGY_Trackcode_5/">Demo</a></button>
+                <a href="https://github.com/Nishanthini876/PRODIGY_Trackcode_5.git" class="project-link">View Project</a>
+            </div>
+        </div>
+        <!-- Project 2 -->
+        <div class="project-card">
+            <img src="shasha.png" alt="Project 2" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Project 2</h3>
+                <p class="project-description">"Guess the Number" is a simple game where players aim to guess a randomly chosen number between 1 and 10. It combines luck and deduction to create quick, engaging entertainment.</p>
+                <button class="demo-button"><a href="https://nishanthini876.github.io/-guess-or-waste-/">Demo</a></button>
+                <a href="https://github.com/Nishanthini876/-guess-or-waste-.git" class="project-link">View Project</a>
+            </div>
+        </div>
+        <!-- Project 3 -->
+        <div class="project-card">
+            <img src="masha.png" alt="Project 3" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Project 3</h3>
+                <p class="project-description">"The Mystery Box" is an intriguing concept where users select a sealed box that contains unknown surprises. It adds an element of suspense and excitement, making every choice an adventure!</p>
+                <button class="demo-button"><a href="https://nishanthini876.github.io/_guess.-a-.-gift_/">Demo</a></button>
+                <a href="https://github.com/Nishanthini876/_guess.-a-.-gift_.git" class="project-link">View Project</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="xoxo.png" alt="Project 3" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Project 4</h3>
+                <p class="project-description">"The XO (Tic-Tac-Toe) game "is a classic two-player strategy game where players take turns marking X or O on a 3x3 grid. The goal is to align three of your symbols in a row, column, or diagonal to win!</p>
+                <button class="demo-button"><a href="https://nishanthini876.github.io/PRODIGY_TRACKCODE__3/">Demo</a></button>
+                <a href="https://github.com/Nishanthini876/PRODIGY_TRACKCODE__3.git" class="project-link">View Project</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="stop.png" alt="Project 3" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Project 5</h3>
+                <p class="project-description">"The stopwatch website" I created is a functional and sleek tool that allows users to start, stop, and reset the timer effortlessly. It's a testament to your skills, providing precise time-tracking for tasks and activities with an intuitive design!</p>
+                <button class="demo-button"><a href="https://nishanthini876.github.io/PRODIGY_Trackcode_2/">Demo</a></button>
+                <a href="https://github.com/Nishanthini876/PRODIGY_Trackcode_2.git" class="project-link">View Project</a>
+            </div>
+        </div>
+        <div class="project-card">
+            <img src="web.png" alt="Project 3" class="project-image">
+            <div class="project-info">
+                <h3 class="project-title">Project 6</h3>
+                <p class="project-description">"The website" I created for  course is a dynamic platform that highlights your technical knowledge and creativity. It effectively blends functionality with user-friendly features, showcasing your ability to build professional web solutions.</p>
+                <button class="demo-button"><a href="https://nishanthini876.github.io/PRODIGY_Trackcode_1/">Demo</a></button>
+                <a href="https://github.com/Nishanthini876/PRODIGY_Trackcode_1.git" class="project-link">View Project</a>
+            </div>
+        </div>
+        
+    </div>
+</section>
+</html>
