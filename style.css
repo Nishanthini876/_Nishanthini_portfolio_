@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
 
-/* General Reset */
 * {
     padding: 0;
     margin: 0;
@@ -16,66 +15,116 @@ body {
     width: 100%;
     height: 100vh;
     background-color: rgb(1, 1, 34);
-    animation: darkDiscoBackground 4s infinite alternate;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    animation: discoBackground 3s infinite alternate;
 }
 
-/* Header Section */
+@keyframes discoBackground {
+    0% { background-color: #101011; }
+    25% { background-color: #232325; }
+    50% { background-color: #0e0e10; }
+    75% { background-color: #1b191b; }
+    100% { background-color: #0c0c0c; }
+}
+
+/* Styling for the top container */
+.top-container {
+    width: 100%;
+    background-color: #0c0c0d; /* Background color for the box */
+    color: white;
+    padding: 10px 0; /* Adds spacing */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-bottom: 3px solid yellowgreen; /* Optional: border for separation */
+     animation: discoBackground 3s infinite alternate;
+}
+
+/* Header styles inside the top container */
 header {
+    width: 90%;
+    margin: 0 auto; /* Centers the header content */
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
-    background-color: #333;
-    color: #fff;
+    justify-content: space-between;
 }
 
 header .logo h2 {
-    font-size: 24px;
+    font-size: 30px;
     font-weight: bold;
 }
 
 header .navbar ul {
     display: flex;
+    align-items: center;
     gap: 20px;
 }
 
 header .navbar ul li a {
-    color: #fff;
-    font-size: 16px;
-    transition: 0.3s;
+    color: white;
+    font-size: 18px;
+    font-weight: 600;
+    transition: 0.3s ease-in-out;
 }
 
 header .navbar ul li a:hover {
-    color: yellowgreen;
+    text-decoration: underline;
+    filter: drop-shadow(0 0 10px black);
+}
+
+header .button {
+    margin-right: 20px;
 }
 
 header .button .btn {
-    background-color: yellowgreen;
-    color: #fff;
-    padding: 10px 15px;
-    border: none;
-    border-radius: 5px;
+    width: 120px;
+    padding: 8px;
+    background-color: transparent;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    border-radius: 10px;
     cursor: pointer;
-    transition: 0.3s;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    transition: 0.4s ease-in-out;
 }
 
 header .button .btn:hover {
-    background-color: white;
-    color: yellowgreen;
-    box-shadow: 0 5px 14px white;
+    scale: 1.1;
+    border-radius: 20px;
+    box-shadow: 0px 5px 14px white;
 }
 
 /* Hero Section */
 .hero {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column; /* Stacks image above text */
     align-items: center;
+    text-align: center;
     padding: 20px;
-    padding-top: 60px;
+    margin-top: 10px;
+}
+
+.hero .left {
+    margin-bottom: 20px; /* Adds space between image and text */
+}
+
+.hero .image img {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 30px white;
+    botom-box-shadow: 0 0 40px white;
 }
 
 .hero .right {
-    margin-left: 50px;
+    margin-top: 10px;
+    text-align: center;
 }
 
 .right h1 {
@@ -94,39 +143,43 @@ header .button .btn:hover {
     font-size: 16px;
     font-weight: 600;
     width: 80%;
+    margin: auto;
+    margin-top: 20px;
 }
 
-.navbar ul {
-    display: flex; /* Keep items in one row */
-    gap: 20px; /* Space between links */
-    list-style: none; /* Removes bullet points */
-    margin: 0;
-    padding: 0;
+.right .buttton {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    
 }
 
-.navbar ul li {
-    display: inline-block; /* Align items horizontally */
+.right .buttton .h-btn {
+    width: 130px;
+    padding: 10px;
+    background-color: transparent;
+    color: white;
+    border: 2px solid white;
+    box-shadow: 0 0 10px white;
+    cursor: pointer;
+    font-size: 17px;
+    transition: 0.4s ease-in-out;
+    margin-top: 10px;
 }
 
-.navbar ul li a {
-    color: #fff;
-    font-size: 16px;
-    text-decoration: none; /* Removes underline */
-    transition: color 0.3s; /* Smooth hover effect */
+.h-btn:hover {
+    scale: 1.1;
+    box-shadow: 0 9px 12px white;
+    border-radius: 23px;
+    filter: drop-shadow(0 0 10px blue);
 }
 
-.navbar ul li a:hover {
-    color: yellowgreen; /* Highlight on hover */
-}/
-
-
-/* Social Media Section */
+/* Social Media Links */
 .right .social-media {
     display: flex;
-    align-items: center;
-    justify-content: center;
     gap: 30px;
-    margin-top: 40px;
+    margin-top: 30px;
+    justify-content: center;
 }
 
 .right .social-media li {
@@ -134,112 +187,55 @@ header .button .btn:hover {
     height: 40px;
     background-color: transparent;
     border: 2px solid white;
+    box-shadow: 0 0 12px white;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
-    transition: 0.4s;
+    cursor: pointer;
+    transition: 0.4s ease-in-out;
 }
 
 .right .social-media li:hover {
     scale: 1.1;
     box-shadow: 0 22px 30px yellowgreen;
-    
 }
 
 .right .social-media li a {
-    color: #fff;
+    color: white;
     font-size: 20px;
 }
+/* Media query for tablets (screens 768px and below) */
+@media screen and (max-width: 768px) {
+    body {
+        height: auto; /* Adjust height for smaller screens */
+    }
 
-/* Hero Left Section */
-.hero .left {
-    margin: 0 auto; /* Centers the image block */
-}
+    .top-container {
+        padding: 15px 0; /* Reduce padding for compact look */
+    }
 
-.hero .left .image {
-    display: flex; /* Ensures proper alignment */
-    justify-content: center; /* Centers the image horizontally */
-    align-items: center; /* Centers the image vertically */
-    margin: 0 auto; /* Centers the image block */
-    width: 100; /* Medium fixed width */
-    height: auto; /* Medium fixed height */
-    border-radius: 50%; /* Makes the image round */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Glow effect */
-    background-color: transparent;
-}
-
-.left .image img {
-   display: block; /* Ensures the image is treated as a block-level element */
-    margin-left: auto; /* Centers the image horizontally */
-    margin-right: auto; /* Centers the image horizontally */
-    margin-top: 20px; /* Adds some spacing above the image (optional) */
-    width: 250px; /* Adjust size to make it slightly bigger */
-    height: auto; /* Maintains the image's aspect ratio */
-    border: 3px solid white; /* Adds a clean white border for style */
-    border-radius: 50%; /* Makes the image round */
-    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.3); /* Subtle glow effect */
-}
-
-/* Disco Background Animation */
-@keyframes discoBackground {
-    0% { background-color: #1d1b1b; }
-    25% { background-color: #232325; }
-    50% { background-color: #0e0e10; }
-    75% { background-color: #212021; }
-    100% { background-color: #232128; }
-}
-
-/* Media Queries for Responsiveness */
-@media (max-width: 768px) {
     header {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+        flex-direction: column; /* Stack header items vertically */
+        text-align: center; /* Center-align header text */
     }
 
-
-    .navbar ul {
-        flex-wrap: wrap; /* Wrap items to the next line if needed */
-        justify-content: center; /* Center links */
-        gap: 15px; /* Adjust spacing for smaller screens */
+    header .navbar ul {
+        flex-direction: column; /* Stack navbar links */
+        gap: 10px; /* Reduce spacing */
     }
-}
-
-
-   
 
     .hero {
-        flex-direction: column;
-        text-align: center;
+        margin-top: 5px; /* Adjust top margin for smaller screens */
     }
 
-    .right, .left {
-        width: 100%;
+    .hero .image img {
+        width: 250px; /* Reduce image size */
+        height: 250px;
     }
 
-    .left .image {
-        width: 120px;
-        height: 120px; /* Adjust smaller dimensions for tablets */
-    }
-
-    .social-media li {
-        margin: 10px;
-    }
-}
-
-@media (max-width: 480px) {
-    .navbar ul {
-        flex-direction: column; /* Stack links vertically */
-        gap: 10px; /* Reduce spacing further */
-    }
-
-    .navbar ul li a {
-        font-size: 14px; /* Slightly smaller font for mobile */
-    }
-}
     .right h1 {
-        font-size: 1.8rem;
+        font-size: 1.8rem; /* Adjust heading size */
     }
 
     .right h2 {
@@ -247,21 +243,85 @@ header .button .btn:hover {
     }
 
     .right p {
-        font-size: 14px;
+        font-size: 1rem; /* Adjust text size */
+        width: 90%; /* Reduce width */
     }
 
-    .left .image {
-        width: 100px;
-        height: 100px; /* Adjust smaller dimensions for mobile devices */
+    .right .buttton {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Adjust button spacing */
     }
 
-    .buttton .h-btn {
-        width: 100%;
-        margin: 10px 0;
-        
+    .right .buttton .h-btn {
+        width: 100px; /* Adjust button width */
+        font-size: 14px; /* Reduce button text size */
+        padding: 8px; /* Compact padding */
     }
 
-    .social-media a {
-        font-size: 1rem;
+    .right .social-media {
+        margin-top: 20px; /* Reduce spacing above social media */
+        gap: 20px; /* Adjust spacing */
+    }
+
+    .right .social-media li {
+        width: 35px; /* Adjust icon size */
+        height: 35px;
+    }
+
+    .right .social-media li a {
+        font-size: 18px; /* Adjust icon text size */
+    }
+}
+
+/* Media query for mobile phones (screens 480px and below) */
+@media screen and (max-width: 480px) {
+    body {
+        padding: 10px; /* Add padding for mobile screens */
+    }
+
+    .top-container {
+        padding: 10px 0;
+    }
+
+    header {
+        flex-direction: column;
+        gap: 15px; /* Add spacing between header items */
+    }
+
+    header .navbar ul {
+        gap: 5px; /* Compact navbar spacing */
+    }
+
+    .hero .image img {
+        width: 200px; /* Further reduce image size */
+        height: 200px;
+    }
+
+    .right h1, .right h2 {
+        font-size: 1.5rem; /* Smaller heading sizes */
+    }
+
+    .right p {
+        font-size: 0.9rem; /* Compact paragraph text */
+        width: 95%; /* Reduce width further */
+    }
+
+    .right .buttton .h-btn {
+        width: 90px; /* Adjust button width for smaller devices */
+        font-size: 12px; /* Smaller text size */
+        padding: 6px; /* Compact padding */
+    }
+
+    .right .social-media {
+        gap: 15px; /* Compact spacing for icons */
+    }
+
+    .right .social-media li {
+        width: 30px; /* Smaller icons */
+        height: 30px;
+    }
+
+    .right .social-media li a {
+        font-size: 16px; /* Adjust text size inside icons */
     }
 }
