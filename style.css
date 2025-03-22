@@ -223,6 +223,7 @@ header .button .btn:hover {
 }
 /* Media query for tablets (screens 768px and below) */
 /* Media query for screens 768px and below (Tablets & Mobiles) */
+/* General Mobile Optimization */
 @media screen and (max-width: 768px) {
     .navbar ul {
         display: flex;
@@ -259,5 +260,49 @@ header .button .btn:hover {
     .navbar ul li a {
         font-size: 10px; /* Slightly smaller font for compact view */
         padding: 4px;
+    }
+
+    /* Centering Content on Mobile */
+    .hero, .right, .top-container {
+        text-align: center; /* Ensures all text and elements are centered */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero .image img {
+        width: 180px; /* Reduce image size for better fit */
+        height: 180px;
+    }
+
+    .right h1, .right h2 {
+        font-size: 1.5rem; /* Adjust font sizes for readability */
+    }
+
+    .right p {
+        font-size: 1rem; /* Keep paragraphs readable */
+        width: 90%; /* Prevents text from stretching too much */
+    }
+
+    /* Buttons Centering */
+    .buttton {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+        gap: 10px;
+    }
+
+    .buttton .h-btn {
+        font-size: 14px;
+        width: auto;
+        padding: 8px;
+    }
+
+    /* Social Media Icons Alignment */
+    .right .social-media {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
     }
 }
