@@ -222,158 +222,42 @@ header .button .btn:hover {
     font-size: 20px;
 }
 /* Media query for tablets (screens 768px and below) */
+/* Media query for screens 768px and below (Tablets & Mobiles) */
 @media screen and (max-width: 768px) {
-    body {
-        height: auto; /* Adjust height for smaller screens */
-    }
-
-    .top-container {
-        padding: 15px 0; /* Reduce padding for compact look */
-    }
-
-    header {
-        flex-direction: column; /* Stack header items vertically */
-        text-align: center; /* Center-align header text */
-    }
-
-    header .navbar ul {
-        flex-direction: column; /* Stack navbar links */
-        gap: 10px; /* Reduce spacing */
-    }
-
-    .hero {
-        margin-top: 5px; /* Adjust top margin for smaller screens */
-    }
-
-    .hero .image img {
-        width: 250px; /* Reduce image size */
-        height: 250px;
-    }
-
-    .right h1 {
-        font-size: 1.8rem; /* Adjust heading size */
-    }
-
-    .right h2 {
-        font-size: 1.5rem;
-    }
-
-    .right p {
-        font-size: 1rem; /* Adjust text size */
-        width: 90%; /* Reduce width */
-    }
-
-    .right .buttton {
-        flex-direction: column; /* Stack buttons vertically */
-        gap: 10px; /* Adjust button spacing */
-    }
-
-    .right .buttton .h-btn {
-        width: 100px; /* Adjust button width */
-        font-size: 14px; /* Reduce button text size */
-        padding: 8px; /* Compact padding */
-    }
-
-    .right .social-media {
-        margin-top: 20px; /* Reduce spacing above social media */
-        gap: 20px; /* Adjust spacing */
-    }
-
-    .right .social-media li {
-        width: 35px; /* Adjust icon size */
-        height: 35px;
-    }
-
-    .right .social-media li a {
-        font-size: 18px; /* Adjust icon text size */
-    }
-}
-
-/* Media query for mobile phones (screens 480px and below) */
-@media screen and (max-width: 480px) {
-    body {
-        padding: 10px; /* Add padding for mobile screens */
-    }
-
-    .top-container {
-        padding: 5px ;
-         
-    }
-     .navbar ul {
-         font-size:10px;
-     }
-    .navbar ul li a {
-         font-size:6px;
-        padding:2px;
-    }
-    
-
-    header {
-        flex-direction: column;
-        gap: 8px; /* Add spacing between header items */
-    }
-
-   
-
-    .hero .image img {
-        width: 200px; /* Further reduce image size */
-        height: 200px;
-    }
-
-    .right h1, .right h2 {
-        font-size: 1.5rem; /* Smaller heading sizes */
-    }
-
-    .right p {
-        font-size: 0.9rem; /* Compact paragraph text */
-        width: 95%; /* Reduce width further */
-    }
-
-    /* Media Query for Mobile Screens (480px and below) */
-@media screen and (max-width: 480px) {
-    /* Navbar Adjustments */
     .navbar ul {
-        display: flex; /* Ensure horizontal alignment */
-        flex-wrap: nowrap; /* Prevent wrapping to the next line */
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Align items vertically */
-        gap: 10px; /* Space between nav items */
-        overflow-x: auto; /* Allow horizontal scrolling if needed */
+        display: flex;
+        flex-wrap: nowrap; /* Prevents items from breaking into new lines */
+        justify-content: center; /* Centers the menu */
+        align-items: center;
+        overflow-x: auto; /* Enables horizontal scrolling if needed */
+        white-space: nowrap; /* Prevents text from wrapping */
+        gap: 10px; /* Space between items */
     }
-    
+
+    .navbar ul li {
+        margin: 0 5px; /* Adjust spacing */
+    }
+
     .navbar ul li a {
-        font-size: 14px; /* Reduce font size for smaller screens */
-        padding: 5px; /* Compact spacing */
-    }
-
-    /* Button Container Adjustments */
-    .buttton {
-        display: flex; /* Align buttons in a single row */
-        justify-content: center; /* Center align buttons */
-        align-items: center; /* Vertical alignment */
-        flex-wrap: nowrap; /* Prevent buttons from wrapping */
-        gap: 10px; /* Space between the buttons */
-        margin-top: 10px; /* Adjust spacing from other elements */
-    }
-
-    .buttton .h-btn {
-        font-size: 14px; /* Smaller font size for buttons */
-        width: auto; /* Allow buttons to resize naturally */
-        padding: 8px; /* Compact padding */
+        font-size: 12px; /* Properly visible font */
+        padding: 5px; /* Adjust padding */
     }
 }
 
-
-    .right .social-media {
-        gap: 15px; /* Compact spacing for icons */
+/* Media query for screens 480px and below (Mobile Phones) */
+@media screen and (max-width: 480px) {
+    .navbar ul {
+        display: flex;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        overflow-x: auto;
+        white-space: nowrap;
+        gap: 8px;
     }
 
-    .right .social-media li {
-        width: 30px; /* Smaller icons */
-        height: 30px;
-    }
-
-    .right .social-media li a {
-        font-size: 16px; /* Adjust text size inside icons */
+    .navbar ul li a {
+        font-size: 10px; /* Slightly smaller font for compact view */
+        padding: 4px;
     }
 }
