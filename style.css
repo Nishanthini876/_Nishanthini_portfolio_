@@ -296,12 +296,21 @@ header .button .btn:hover {
     }
 
     .top-container {
-        padding: 10px 0;
+        padding: 5px ;
+         
     }
+     .navbar ul {
+         font-size:10px;
+     }
+    .navbar ul li a {
+         font-size:6px;
+        padding:2px;
+    }
+    
 
     header {
         flex-direction: column;
-        gap: 15px; /* Add spacing between header items */
+        gap: 8px; /* Add spacing between header items */
     }
 
    
