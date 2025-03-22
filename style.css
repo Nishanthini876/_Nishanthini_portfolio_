@@ -224,29 +224,20 @@ header .button .btn:hover {
 /* Media query for tablets (screens 768px and below) */
 /* Media query for screens 768px and below (Tablets & Mobiles) */
 /* General Mobile Optimization */
+
+/* General Reset */
+
+/* Mobile Optimization (Max Width: 768px) */
 @media screen and (max-width: 768px) {
-    .navbar ul {
+    .navbar {
         display: flex;
-        flex-wrap: nowrap; /* Prevents items from breaking into new lines */
-        justify-content: center; /* Centers the menu */
+        justify-content: center;
         align-items: center;
-        overflow-x: auto; /* Enables horizontal scrolling if needed */
-        white-space: nowrap; /* Prevents text from wrapping */
-        gap: 10px; /* Space between items */
+        width: 100%;
+        padding: 10px 0;
+        background-color: #000; /* Adjust as needed */
     }
 
-    .navbar ul li {
-        margin: 0 5px; /* Adjust spacing */
-    }
-
-    .navbar ul li a {
-        font-size: 12px; /* Properly visible font */
-        padding: 5px; /* Adjust padding */
-    }
-}
-
-/* Media query for screens 480px and below (Mobile Phones) */
-@media screen and (max-width: 480px) {
     .navbar ul {
         display: flex;
         flex-wrap: nowrap;
@@ -255,54 +246,111 @@ header .button .btn:hover {
         overflow-x: auto;
         white-space: nowrap;
         gap: 8px;
+        padding: 0;
+        margin: 0;
+    }
+
+    .navbar ul li {
+        list-style: none;
+        margin: 0 5px;
     }
 
     .navbar ul li a {
-        font-size: 10px; /* Slightly smaller font for compact view */
-        padding: 4px;
+        font-size: 12px;
+        padding: 6px 10px;
+        text-decoration: none;
+        color: white;
     }
 
-    /* Centering Content on Mobile */
-    .hero, .right, .top-container {
-        text-align: center; /* Ensures all text and elements are centered */
+    /* Hero Section */
+    .hero {
+        text-align: center;
         display: flex;
         flex-direction: column;
         align-items: center;
+        padding: 20px;
     }
 
     .hero .image img {
-        width: 180px; /* Reduce image size for better fit */
-        height: 180px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
     }
 
-    .right h1, .right h2 {
-        font-size: 1.5rem; /* Adjust font sizes for readability */
+    .right h1 {
+        font-size: 1.8rem;
+        margin-top: 10px;
+    }
+
+    .right h2 {
+        font-size: 1.4rem;
+        color: #7CD321; /* Adjust for better visibility */
     }
 
     .right p {
-        font-size: 1rem; /* Keep paragraphs readable */
-        width: 90%; /* Prevents text from stretching too much */
+        font-size: 1rem;
+        width: 90%;
+        margin-top: 10px;
     }
 
-    /* Buttons Centering */
+    /* Buttons */
     .buttton {
         display: flex;
         justify-content: center;
         align-items: center;
-        flex-wrap: nowrap;
         gap: 10px;
+        margin-top: 15px;
     }
 
     .buttton .h-btn {
         font-size: 14px;
-        width: auto;
-        padding: 8px;
+        padding: 10px 15px;
+        border-radius: 5px;
+        background-color: #7CD321;
+        color: white;
+        text-decoration: none;
     }
 
-    /* Social Media Icons Alignment */
+    /* Social Media Icons */
     .right .social-media {
         display: flex;
         justify-content: center;
         gap: 15px;
+        margin-top: 15px;
     }
 }
+
+/* Extra Small Screens (Max Width: 480px) */
+@media screen and (max-width: 480px) {
+    .navbar {
+        padding: 8px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 10px;
+        padding: 5px;
+    }
+
+    .hero .image img {
+        width: 130px;
+        height: 130px;
+    }
+
+    .right h1 {
+        font-size: 1.5rem;
+    }
+
+    .right h2 {
+        font-size: 1.2rem;
+    }
+
+    .right p {
+        font-size: 0.9rem;
+    }
+
+    .buttton .h-btn {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+}
+
