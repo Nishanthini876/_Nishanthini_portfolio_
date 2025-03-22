@@ -262,9 +262,33 @@ header .button .btn:hover {
         text-align: center; /* Center-align header text */
     }
 
-    header .navbar ul {
-        flex-direction: column; /* Stack navbar links */
-        gap: 10px; /* Reduce spacing */
+    .navbar {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        padding: 10px 0;
+        background-color: #fff; /* Ensure visibility */
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-wrap: nowrap; /* Keep items in one line */
+        justify-content: center;
+        overflow-x: auto; /* Allow scrolling if needed */
+        white-space: nowrap; /* Prevent wrapping */
+        padding: 0;
+        list-style: none;
+        gap: 10px;
+    }
+
+    .navbar ul li {
+        margin: 0 5px; /* Adjust spacing */
+    }
+
+    .navbar ul li a {
+        font-size: 14px; /* Adjust font size */
+        padding: 5px 10px;
     }
 
     .hero {
@@ -290,112 +314,34 @@ header .button .btn:hover {
     }
 
     .right .buttton {
-        flex-direction: column; /* Stack buttons vertically */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row; /* Ensure buttons align properly */
         gap: 10px; /* Adjust button spacing */
+        margin-top: 10px;
     }
 
     .right .buttton .h-btn {
-        width: 100px; /* Adjust button width */
+        width: auto; /* Allow buttons to resize naturally */
         font-size: 14px; /* Reduce button text size */
         padding: 8px; /* Compact padding */
     }
 
     .right .social-media {
         margin-top: 20px; /* Reduce spacing above social media */
-        gap: 20px; /* Adjust spacing */
-    }
-
-    .right .social-media li {
-        width: 35px; /* Adjust icon size */
-        height: 35px;
-    }
-
-    .right .social-media li a {
-        font-size: 18px; /* Adjust icon text size */
-    }
-}
-
-
-/* Media query for mobile phones (screens 480px and below) */
-@media (max-width: 768px) {
-    .navbar ul {
+        gap: 15px; /* Adjust spacing */
         display: flex;
-        flex-wrap: nowrap; /* Keep items in one line */
         justify-content: center;
-        overflow-x: auto; /* Allow scrolling if needed */
-        white-space: nowrap; /* Prevent wrapping */
-        padding: 0;
-        list-style: none;
-    }
-
-    .navbar ul li {
-        margin: 0 5px; /* Adjust spacing */
-    }
-
-    .navbar ul li a {
-        font-size: 10px; /* Adjust font size */
-        padding: 3px;
-    }
-}
-
-    @media screen and (max-width: 480px) {
-        .navbar ul {
-            flex-direction: row; /* Ensure items stay in a single row */
-            overflow-x: auto; /* Enable horizontal scrolling for narrow screens */
-            gap: 15px; /* Reduce spacing between items */
-        }
-    
-        .navbar ul li a {
-            font-size: 14px; /* Adjust font size for smaller screens */
-            padding: 8px; /* Compact padding for smaller devices */
-        }
-    }
-
-    /* Media Query for Mobile Screens (480px and below) */
-@media screen and (max-width: 480px) {
-    /* Navbar Adjustments */
-    .navbar ul {
-        display: flex; /* Ensure horizontal alignment */
-        flex-wrap: nowrap; /* Prevent wrapping to the next line */
-        justify-content: center; /* Center items horizontally */
-        align-items: center; /* Align items vertically */
-        gap: 10px; /* Space between nav items */
-        overflow-x: auto; /* Allow horizontal scrolling if needed */
-    }
-    
-    .navbar ul li a {
-        font-size: 14px; /* Reduce font size for smaller screens */
-        padding: 5px; /* Compact spacing */
-    }
-
-    /* Button Container Adjustments */
-    .buttton {
-        display: flex; /* Align buttons in a single row */
-        justify-content: center; /* Center align buttons */
-        align-items: center; /* Vertical alignment */
-        flex-wrap: nowrap; /* Prevent buttons from wrapping */
-        gap: 10px; /* Space between the buttons */
-        margin-top: 10px; /* Adjust spacing from other elements */
-    }
-
-    .buttton .h-btn {
-        font-size: 14px; /* Smaller font size for buttons */
-        width: auto; /* Allow buttons to resize naturally */
-        padding: 8px; /* Compact padding */
-    }
-}
-
-
-    .right .social-media {
-        gap: 15px; /* Compact spacing for icons */
+        align-items: center;
     }
 
     .right .social-media li {
-        width: 30px; /* Smaller icons */
+        width: 30px; /* Adjust icon size */
         height: 30px;
     }
 
     .right .social-media li a {
-        font-size: 16px; /* Adjust text size inside icons */
+        font-size: 16px; /* Adjust icon text size */
     }
-
+}
