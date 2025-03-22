@@ -8,6 +8,18 @@
     text-decoration: none;
     font-family: 'Poppins', sans-serif;
 }
+.icon {
+    width: 50px; /* Width of the circle */
+    height: 50px; /* Height of the circle */
+    background-color: #333333; /* Background color for the icon */
+    color: white; /* Icon color */
+    border-radius: 50%; /* Makes the shape circular */
+    display: flex; /* Aligns the content */
+    justify-content: center; /* Centers the content horizontally */
+    align-items: center; /* Centers the content vertically */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3); /* Optional: Adds shadow for effect */
+}
+
 
 body {
     position: relative;
@@ -32,27 +44,31 @@ body {
 /* Styling for the top container */
 .top-container {
     width: 100%;
-    background-color: #0c0c0d;
+    background-color: #0c0c0d; /* Background color for the box */
     color: white;
-    padding: 10px 0;
-    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
-    border-bottom: 3px solid yellowgreen;
-    animation: discoBackground 3s infinite alternate;
+    padding: 10px 0; /* Adds spacing */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow */
+    border-bottom: 3px solid yellowgreen; /* Optional: border for separation */
+     animation: discoBackground 3s infinite alternate;
 }
 
-/* Header Styles */
+/* Header styles inside the top container */
 header {
     width: 90%;
-    margin: 0 auto;
+    margin: 0 auto; /* Centers the header content */
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
-
+icon{
+    border-radius: 50%;
+}
 header .logo h2 {
     font-size: 30px;
     font-weight: bold;
+
 }
+
 
 header .navbar ul {
     display: flex;
@@ -99,19 +115,32 @@ header .button .btn:hover {
 /* Hero Section */
 .hero {
     display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Stacks image above text */
     align-items: center;
     text-align: center;
     padding: 20px;
     margin-top: 10px;
 }
 
+.hero .left {
+    margin-bottom: 20px; /* Adds space between image and text */
+}
+
 .hero .image img {
     width: 300px;
     height: 300px;
-    border-radius: 50%;
+    border-radius: 50%; /* Makes the image circular */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow */
+    background-color: transparent;
+    color: white;
     border: 2px solid white;
     box-shadow: 0 0 30px white;
+    botom-box-shadow: 0 0 40px white;
+}
+
+.hero .right {
+    margin-top: 10px;
+    text-align: center;
 }
 
 .right h1 {
@@ -138,7 +167,34 @@ header .button .btn:hover {
     display: flex;
     gap: 20px;
     justify-content: center;
+    
 }
+.typing-container {
+    font-family: 'Courier New', monospace;
+    color: white;
+    background-color: black;
+    padding: 20px;
+    border-radius: 10px;
+    width: fit-content;
+    margin: auto;
+    text-align: left;
+}
+
+.typing-text {
+    border-right: 2px solid white; /* Blinking cursor effect */
+    display: inline-block;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 100%;
+    animation: blink 0.5s step-end infinite alternate;
+}
+
+@keyframes blink {
+    50% {
+        border-right-color: transparent;
+    }
+}
+
 
 .right .buttton .h-btn {
     width: 130px;
@@ -171,6 +227,7 @@ header .button .btn:hover {
 .right .social-media li {
     width: 40px;
     height: 40px;
+    background-color: transparent;
     border: 2px solid white;
     box-shadow: 0 0 12px white;
     border-radius: 50%;
@@ -186,67 +243,159 @@ header .button .btn:hover {
     box-shadow: 0 22px 30px yellowgreen;
 }
 
-/* Navbar Fix */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    padding: 12px 15px;
-    background-color: #000;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1000;
-}
-
-.navbar .logo {
-    font-size: 18px;
-    font-weight: bold;
+.right .social-media li a {
     color: white;
-    text-decoration: none;
+    font-size: 20px;
 }
-
-.navbar ul {
-    display: flex;
-    flex-wrap: nowrap;
-    justify-content: center;
-    align-items: center;
-    overflow-x: auto;
-    white-space: nowrap;
-    gap: 10px;
-}
-
-.navbar ul li a {
-    font-size: 13px;
-    padding: 8px 12px;
-    text-decoration: none;
-    color: white;
-}
-
+/* Media query for tablets (screens 768px and below) */
 @media screen and (max-width: 768px) {
-    .navbar {
-        padding: 10px 12px;
+    body {
+        height: auto; /* Adjust height for smaller screens */
     }
-    .navbar ul {
-        justify-content: flex-end;
-        overflow-x: auto;
-        white-space: nowrap;
-        gap: 8px;
+
+    .top-container {
+        padding: 15px 0; /* Reduce padding for compact look */
     }
-    .navbar ul li a {
-        font-size: 12px;
-        padding: 6px;
+
+    header {
+        flex-direction: column; /* Stack header items vertically */
+        text-align: center; /* Center-align header text */
+    }
+
+    header .navbar ul {
+        flex-direction: column; /* Stack navbar links */
+        gap: 10px; /* Reduce spacing */
+    }
+
+    .hero {
+        margin-top: 5px; /* Adjust top margin for smaller screens */
+    }
+
+    .hero .image img {
+        width: 250px; /* Reduce image size */
+        height: 250px;
+    }
+
+    .right h1 {
+        font-size: 1.8rem; /* Adjust heading size */
+    }
+
+    .right h2 {
+        font-size: 1.5rem;
+    }
+
+    .right p {
+        font-size: 1rem; /* Adjust text size */
+        width: 90%; /* Reduce width */
+    }
+
+    .right .buttton {
+        flex-direction: column; /* Stack buttons vertically */
+        gap: 10px; /* Adjust button spacing */
+    }
+
+    .right .buttton .h-btn {
+        width: 100px; /* Adjust button width */
+        font-size: 14px; /* Reduce button text size */
+        padding: 8px; /* Compact padding */
+    }
+
+    .right .social-media {
+        margin-top: 20px; /* Reduce spacing above social media */
+        gap: 20px; /* Adjust spacing */
+    }
+
+    .right .social-media li {
+        width: 35px; /* Adjust icon size */
+        height: 35px;
+    }
+
+    .right .social-media li a {
+        font-size: 18px; /* Adjust icon text size */
     }
 }
 
-@media screen and (max-width: 480px) {
-    .navbar {
-        padding: 8px 10px;
+
+/* Media query for mobile phones (screens 480px and below) */
+@media (max-width: 768px) {
+    .navbar ul {
+        display: flex;
+        flex-wrap: nowrap; /* Keep items in one line */
+        justify-content: center;
+        overflow-x: auto; /* Allow scrolling if needed */
+        white-space: nowrap; /* Prevent wrapping */
+        padding: 0;
+        list-style: none;
     }
+
+    .navbar ul li {
+        margin: 0 5px; /* Adjust spacing */
+    }
+
     .navbar ul li a {
-        font-size: 11px;
-        padding: 5px;
+        font-size: 10px; /* Adjust font size */
+        padding: 3px;
     }
 }
+
+    @media screen and (max-width: 480px) {
+        .navbar ul {
+            flex-direction: row; /* Ensure items stay in a single row */
+            overflow-x: auto; /* Enable horizontal scrolling for narrow screens */
+            gap: 15px; /* Reduce spacing between items */
+        }
+    
+        .navbar ul li a {
+            font-size: 14px; /* Adjust font size for smaller screens */
+            padding: 8px; /* Compact padding for smaller devices */
+        }
+    }
+
+    /* Media Query for Mobile Screens (480px and below) */
+@media screen and (max-width: 480px) {
+    /* Navbar Adjustments */
+    .navbar ul {
+        display: flex; /* Ensure horizontal alignment */
+        flex-wrap: nowrap; /* Prevent wrapping to the next line */
+        justify-content: center; /* Center items horizontally */
+        align-items: center; /* Align items vertically */
+        gap: 10px; /* Space between nav items */
+        overflow-x: auto; /* Allow horizontal scrolling if needed */
+    }
+    
+    .navbar ul li a {
+        font-size: 14px; /* Reduce font size for smaller screens */
+        padding: 5px; /* Compact spacing */
+    }
+
+    /* Button Container Adjustments */
+    .buttton {
+        display: flex; /* Align buttons in a single row */
+        justify-content: center; /* Center align buttons */
+        align-items: center; /* Vertical alignment */
+        flex-wrap: nowrap; /* Prevent buttons from wrapping */
+        gap: 10px; /* Space between the buttons */
+        margin-top: 10px; /* Adjust spacing from other elements */
+    }
+
+    .buttton .h-btn {
+        font-size: 14px; /* Smaller font size for buttons */
+        width: auto; /* Allow buttons to resize naturally */
+        padding: 8px; /* Compact padding */
+    }
+}
+
+
+    .right .social-media {
+        gap: 15px; /* Compact spacing for icons */
+    }
+
+    .right .social-media li {
+        width: 30px; /* Smaller icons */
+        height: 30px;
+    }
+
+    .right .social-media li a {
+        font-size: 16px; /* Adjust text size inside icons */
+    }
+
