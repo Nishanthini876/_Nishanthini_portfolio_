@@ -127,7 +127,7 @@ header .button .btn:hover {
 }
 
 .hero .image img {
-    width: 280px;
+    width: 295px;
     height: 300px;
     border-radius: 50%; /* Makes the image circular */
     box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* Subtle shadow */
