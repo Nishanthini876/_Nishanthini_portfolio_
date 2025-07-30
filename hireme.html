@@ -147,8 +147,8 @@
   <script>
     document.getElementById('downloadResume').addEventListener('click', function() {
       const link = document.createElement('a');
-      link.href = 'newResume (2).pdf'; // Make sure this file exists in the same folder
-      link.download =' newResume (2).pdf';
+      link.href = 'newResume.pdf'; // Make sure this file exists in the same folder
+      link.download ='newResume.pdf';
       document.body.appendChild(link); // Required for Firefox
       link.click();
       document.body.removeChild(link);
